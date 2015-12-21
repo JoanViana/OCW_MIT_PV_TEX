@@ -1,5 +1,5 @@
 # OCW_MIT_PV_TEX
-LaTeX code of Apuntes de MIT Course 2.627 / 2.626\Fundamentals of Photovoltaics
+LaTeX code of Apuntes de MIT Course 2.627 / 2.626 - Fundamentals of Photovoltaics
 
 ### Author: Joan Dídac Viana Fons <joanvianafons@gmail.com>
 
