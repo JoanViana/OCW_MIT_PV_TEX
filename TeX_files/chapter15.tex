@@ -1,0 +1,71 @@
+\section{Advanced Concepts}
+
+
+\subsection{Series Resistance}
+El electrón del Si en la banda dopada de portadores (p) está en un estado de mínima energía (banda-orbital estable). Cuando éste se excita por absorción de un fotón con energía mayor a la energía de activación éste llega a la banda de conducción y desde aquí al ánodo (contacto metálico). De forma simultánea al desplazamiento del portador de carga se crea un hueco en p (fósforo) que pasa a n (Boro) por difusión.
+
+El recorrido que realiza el electrón desde al ánodo hasta que ? corresponde con $ R_s $ compuesto por tres resistencias:  $ r_{emitter} $(en la superficie del semiconductor hasta finger) +  $ r_{contact} $(interfase semiconductor-finger) +  $ r_{line} $(conductor sobre la célula). Ésta tiene mucho que ver con la eficiencia final del módulo y su componente mayoritario es $ r_{contact} $ que tiene mucho que ver con cómo se ha realizado la interfase (Apartado \ref{u15.contactFiring}).
+
+%	\begin{figure}[H]
+%		\centering
+%		\begin{subfigure}{.5\textwidth}
+%			\centering
+%			\includegraphics[width=0.8\linewidth]{./figs/RESIST.png}
+%		\end{subfigure}%
+%		\begin{subfigure}{.5\textwidth}
+%			\centering
+%			\includegraphics[width=0.8\linewidth]{./figs/RESIS3.png}
+%		\end{subfigure}
+%		\label{pic.resistance}
+%	\end{figure}
+
+\subsubsection{Shadow losses: $ r_{emitter} $}
+Para reducir $ L $, la longitud a recorrer por el electrón en la superficie P se puede pensar en aumentar las líneas busbar. Sin embargo, es necesario recordar que el busbar está sobre la célula y produce el sombreado de parte de la superficie de captación: el efecto sobre la eficiencia de la célula que tiene el sombreado que ejerce el busbar (contactos en la fase P) se estima entorno al 3\%. 
+\begin{itemize}
+	\item $ 4 mm $ separación : $ I_{sc} = 0.62 A$.
+	\item $ 2 mm $ separación : $ I_{sc} = 0.60 A$.	(Doble de contactos)	
+\end{itemize}
+
+\subsubsection{Contact Firing: $ r_{contact} $}
+\label{u15.contactFiring}
+Respecto a la mejora del contacto tiene mucho que ver la tecnología de fabricación utilizada en el proceso. Se recogen algunos spots de algnos fabricantes de las máquinas que realizan los contactos.
+\begin{itemize}
+	\item BTU :{\em The contact firing and metallization application is used in the manufacturing of silicon solar cells. It involves the process by which thick film conductive inks (usually silver and aluminum) are applied to the front and back side of the solar cell. The material is usually screen printed or spot printed onto the cell. The paste will be dried and subsequent layers are added using the same method. The final step is performed in the metallization furnace. The metallization furnace actually integrates four process steps into one tool: drying to remove the last solvent, burnout to remove the binder, firing to form the electrical contact, and finally the cool down. Firing is the most critical step. The solar cells are rapidly heated to a peak temperature, ranging from $ 780ºC $ to $ 900ºC $ followed by rapid cooling.	
+		Very fast ramp rates are required to optimize contact formation on silicon wafers. Rapid heating ensures proper fire-through to deliver excellent contact to n-Si layer and also to improve the aluminum back surface field, while fast cooling is required to prevent the diffusion of silver into the junction. Rapid ramp rates are constantly pushing for faster belt speed, which in turn drives the overall length of the firing furnace. Uptime, reliability, and Cost of Ownership are also becoming increasingly important. In the meantime, cell producers strive to reduce wafer thickness for higher material efficiency, which will pose more stringent requirements on next generation firing furnace.}
+	\item Smith Thermal Solutions: {\em Our contact firing ovens help you reduce the costs of cadmium-telluride $ (CdTe) $ solar panel production. With extremely accurate temperature control, they ensure you make the most efficient use of your raw materials. And they allow you to adjust process timing for maximum production flexibility with fewer production delays and backlogs. Moreover, the unique system design eliminates any "first panel effects". That means that after any production stoppages, the very first glass you put through the system gives you a good product out for the highest yields and lowest running costs.}	
+\end{itemize}
+
+%\begin{itemize}
+%	\item 
+%	\item 
+%	\item 
+%\end{itemize}
+
+\subsection{Temperature}
+La temperatura aumenta la probabilidad/cantidad de portadores excitados térmicamente (thermally-promoted carriers). Aumenta la corriente de saturación y disminuye el potencial.
+\begin{itemize}
+	\item Band gap $ (eV) $ disminuye con la temperatura
+	\item $ V_{oc} $ disminuye con la temperatura: $ -2.2 mV/ºC $ para el Si.
+	\item $ I_{sc} $ aumenta con la temperatura: $ 0.6 mA/ºC $ para el Si.
+	\item $ FF  $ disminuye con la temperatura: $ - 0.0015 (ºC)^{-1} $ para el Si
+	\item $ eff  $ disminuye con la temperatura: $ - 0.005 = - 0.5 \% (ºC)^{-1} $ para el Si
+\end{itemize}
+{\paragraph{Nota}	
+	{\rule{0.9\textwidth}{1pt} \\\\
+	En sistemas concentrados se utiliza enfriamiento forzado para evitar grandes descensos en el rendimiento debido a la temperatura.\\
+		\rule{0.99\textwidth}{1pt}\\}}
+
+\subsection{Shadow}
+Cuando una célula se encuentra bajo el efecto de sombreado, la curva IV cae y la célula opera en {\em reverse bias}: $  (I> 0,  V<0) \rightarrow $ mucha intensidad a través del propio semiconductor: La corriente pasa a través de $ R_{sh} $, es decir a través de la propia sección del semiconductor (fases p, n e interfase). Incluso con intensidades bajas, éstas pueden causar daños en la célula. Por esta razón se protegen las células con diodos, que se polarizan (conducen la intensidad de la serie) cuando alguna célula de la serie que protege se encuentra en {\em reverse bias}.
+
+{\paragraph{Nota}	
+	{\rule{0.9\textwidth}{1pt} \\\\
+	 $ R_{sh} $ due to manufacturing defects, rather than poor solar cell design. Low shunt resistance causes power losses in solar cells by providing an alternate current path for the light-generated current. Such a diversion reduces the amount of current flowing through the solar cell junction and reduces the voltage from the solar cell. The effect of a shunt resistance is particularly severe at low light levels, since there will be less light-generated current. The loss of this current to the shunt therefore has a larger impact. In addition, at lower voltages where the effective resistance of the solar cell is high, the impact of a resistance in parallel is large. An estimate for the value of the shunt resistance of a solar cell can be determined from the slope of the IV curve near the short-circuit current point.\\
+		\rule{0.99\textwidth}{1pt}\\}}
+
+\subsection{Mismatch}
+El estudio de calidad en el sentido más profundo del término {\em minimizar de forma continua la variabilidad en los procesos de fabricación} es uno de los puntos clave en la industria fotovoltaica.
+\begin{itemize}
+	\item Unión en Serie (top contact one cell - bottom contact other cell): match I, add V
+	\item Unión en Paralelo (top contact one cell-top contact other cell \&\& bottom contact one cell - bottom contact other cell): match V, add I
+\end{itemize}

@@ -1,0 +1,96 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{lipsum}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\spanishdecimal{.}
+
+\usepackage{paralist}
+\usepackage{enumitem}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%\usepackage[linewidth=0.8pt]{mdframed}
+\usepackage{movie15}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{float}
+\usepackage{wrapfig}
+%\usepackage{color}
+
+%\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{booktabs,caption}
+\usepackage{tablefootnote} 
+
+\usepackage{footnote}
+\usepackage{cite} 
+\usepackage[stable]{footmisc}
+
+\usepackage[bookmarksdepth=2]{hyperref}
+\setcounter{tocdepth}{2}
+
+\usepackage{nomencl}
+\usepackage{etoolbox}
+\makenomenclature
+
+\makeatletter
+\patchcmd{\thenomenclature}{\section*}{\section*}{}{}
+\makeatother
+\renewcommand{\nomname}{Nomenclatura}
+\makenomenclature
+
+
+
+\usepackage{appendix}
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+\author{Joan Dídac Viana Fons}
+\title{Apuntes de MIT Course 2.627 / 2.626\\Fundamentals of Photovoltaics}
+\date{December 2015\\Versión 1.2}
+
+\begin{document}
+
+\maketitle
+
+	\begin{abstract}		
+		\noindent En este documento se recogen las notas tomadas durante el curso {\em Fundamentals of Photovoltaics} de la plataforma MIT OpenCourseWare disponible en {\scriptsize \url{ http://ocw.mit.edu/courses/mechanical-engineering/2-627-fundamentals-of-photovoltaics-fall-2013}}. Cada sección corresponde con un capítulo del curso. El contenido{\footnote{El código \LaTeX  está disponible en el repositorio {\scriptsize \url{https://github.com/JoanViana/OCW_MIT_PV_TEX.git}}.}}{\footnote{Esta obra está sujeta a la licencia Reconocimiento 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visite {\scriptsize \url{http://creativecommons.org/licenses/by/4.0/}}.}} se irá actualizando hasta completar el curso.
+	\end{abstract}
+	
+\tableofcontents
+
+
+
+%\include{./TeX_files/chapter01}
+%\include{./TeX_files/chapter02}
+%\include{./TeX_files/chapter03}
+%\include{./TeX_files/chapter04}
+%\include{./TeX_files/chapter05}
+%\include{./TeX_files/chapter06}
+%\include{./TeX_files/chapter07}
+%\include{./TeX_files/chapter08}
+%\include{./TeX_files/chapter09}
+%\include{./TeX_files/chapter10}
+%\include{./TeX_files/chapter11}
+%\include{./TeX_files/chapter12}
+%\include{./TeX_files/chapter13}
+\include{./TeX_files/chapter14}
+\include{./TeX_files/chapter15}
+%\include{./TeX_files/chapter16}
+%\include{./TeX_files/chapter17}
+%\include{./TeX_files/chapter18}
+%\include{./TeX_files/chapter19}
+
+\end{document}

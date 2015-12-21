@@ -1,0 +1,75 @@
+\section{PV Efficiency: Measurement \& Theoretical Limits}
+\subsection{Identify source(s) of record solar cell efficiencies.}
+\paragraph{Efficiency}
+Es posible calcular la eficiencia de un módulo en el laboratorio, con cierta desviación estándar o error.
+
+Cunado escalamos las células fotovoltaicas, construyendo módulos o arrays tenemos una analogía con la fractura cerámica:
+{\em Cuán más grande es la probeta más probabilidad de encontrar grandes defectos y, por tanto, su tensión de rotura y su módulo de elasticidad es menor que en piezas pequeñas, donde la probabilidad de encontrar estos grandes defectos es menor}.
+\subparagraph{State of art of efficiency}
+El número de enero de cada año de la revista {\em Progress in Photovoltaics} es gratuito. En él se incluyen siempre dos artículos:
+\begin{itemize}
+	\item Solar cell efficiency tables: foto de la tecnología actual
+	\item Photovoltaics literature survey
+\end{itemize}
+\url {http://onlinelibrary.wiley.com/journal/10.1002/\%28ISSN\%291099-159X}
+\subparagraph{Historical records of efficiency}
+Otra fuente del estado del arte en cuanto a eficiencias de módulos respecta es {\em L.L. Kazmerski} de NREL en el cual hace un recorrido histórico de la eficiencia de las diferentes tecnologías fotovoltaicas.
+
+\subsection{Identify source(s) of “standard” solar spectra.}
+\begin{itemize}
+	\item ASTM / AM0: \url {http://rredc.nrel.gov/solar/spectra/am0/wehrli85.txt}
+	\item ASTM G173-03 / AM1.5: Válido para climas temperados. Aquí se muestran las componentes directa y difusa. \url{http://rredc.nrel.gov/solar/spectra/am1.5/ASTMG173/ASTMG173.html}	
+\end{itemize}
+La constante solar varía de año en año. Por ejemplo el rango entre 1940 y 2010 es de $ 120 W/m^2 $.
+
+\subsection{Describe how to simulate the solar spectrum in the lab: Describe how a solar simulator works.}
+Para probar la eficiencia de una célula fotovoltaica se utiliza en el laboratorio un {\em Simulador Solar} que simula el Espectro ASTM G173-03 / AM1.5 con una fuente de luz de Xenón que reproduce la emisión solar y un filtro que intenta simular la atmósfera para que en conjunto se obtenga un output similar a dicho estándar. Realmente la lampara de $ Xe $ produce ciertos picos en el espectro (característicos de la estructura atómica del elemento) que deben ser suprimidos por el filtro.
+
+Según el {\em Standard IEC 904-9: Requirements for solar simulators for crystalline Si single-junction devices} se utilizan tres propiedades para caracterizar un Simulador Solar {\em Uniformity/Spectral fidelity(Match)/Temporal stability} y se le asigna un parámetro de calidad a cada una de estas propiedades {\em Class A/B/C}. Así un simulador puede ser {\em AAA}, {\em AAB} o {\em BBB}. 
+
+Otros estándares: \url{http://web.archive.org/web/20111018110532/http://photovoltaics.sandia.gov/docs/pvstndrds.htm}
+{\paragraph{Nota}	
+	{\rule{0.9\textwidth}{1pt} \\\\
+		Materiales fotosensibles: materiales que varían su eficiencia con la iluminación. Ejemplo: Si-amorfo\\
+		\rule{0.99\textwidth}{1pt}\\}}
+
+\subsection{Describe how to accurately measure \& report cell efficiency, and how to avoid common pitfalls when attempting to measure cell efficiency.}
+Para medir la eficiencia de nuestra célula se deben tener en cuenta todos los posibles efectos que nos desvíen de las condiciones estándar (temperatura, luminosidad\dots). Se utiliza además una célula calibrada. Una forma de asegurarse la calibración es utilizando la célula de NREL {\em FhISE} aunque se degrada fácilmente. Se puede realizar en el laboratorio siguiendo una serie de protocolos (materiales de medida, dee soporte\dots).
+
+Lo más importante en lo que a medición de la eficiencia respecta es que los materiales de la célula calibrada y la nuestra sean los mismos. Si no tenemos una célula calibrada del material en cuestión (por ejemplo, porque es un nuevo material), debemos medir el espectro de nuestra fuente de luz y calcular el rendimiento cuántico a partir de este espectro: No valen comparaciones con células calibradas de distinta naturaleza (Spectral Mismtach). Se puede obtener además, certificados oficiales de rendimiento en institutos especializados como NREL.
+
+Diferencias entre la medida del laboratorio y del campo:
+\begin{itemize}
+	\item Caída de tensión por $T > 25º $.
+	\item Esquema de contacto (pérdida en soldadura)
+	\item Espectro
+	\item \dots
+\end{itemize}
+
+\subsection{Describe efficiency limitations of a typical solar cell}
+\paragraph{Blackbody (heat engine) limit}: Thermodinamic limit of one object looking at another. $ \approx 86 \% $. Considera todo el espectro. Acerca de la energía solar.
+\paragraph{Detailed balance photons model:} Shockley-Queisser efficiency limit. Específico de la célula solar. Considera mobilidad de los portadores infinita (no considera los gradientes existentes en un dispositivo real). Aquí se calcula la eficiencia cuántica teniendo en cuenta dos principales pérdidas: {\em non-absortion of light/thermalization of carriers}. Las hipótesis principales que toma son: 
+\begin{itemize}
+\item All photons with $ E > Eg $ are absorbed, and create one electron-hole pair.
+\item Electron and hole populations relax to band edges to create separate distributions in quasi thermal equilibrium with the lattice temperature, resulting in quasi Fermi levels separated by $ D\mu $.
+\item Each electron is extracted with a chemical potential energy $ \mu $, such that $ qV = D\mu $. Requires constant quasi Fermi levels throughout, i.e., carriers have infinite mobility.
+\item The only loss mechanism is radiative recombination (a.k.a., spontaneous emission).
+\end{itemize}
+Ver \url{http://www.pveducation.org/pvcdrom/solar-cell-operation/detailed-balance}
+\paragraph{Other (realistic) considerations}
+\begin{itemize}
+	\item Recombination mechanisisms: diferentes tipos
+	\item Photon recycling (mainly $ Ga $)
+	\item Finite mobility balance: J. Mattheis et al., 2008.
+\end{itemize}
+
+Se obtiene entonces:
+\begin{itemize}
+	\item Non-absorption of light ($ Eph < Eg $): $ 0.74  $
+	\item Thermalization of charge carriers ($ Eph > Eg $): $ 0.67 $
+	\item Thermodynamic losses: $ 0.64 $
+	\item Fill factor losses (practical solar cell operation): $  0.89 $
+\end{itemize}
+Resulting Efficiency Limit: $ (0.74) \cdot (0.67) \cdot (0.64) \cdot (0.89) = 0.28 $
+
+Pero hay que tener en cuenta que los límites de eficiencia han variado con el tiempo: Nuevas tecnologías, nuevos límites.
